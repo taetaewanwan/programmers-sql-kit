@@ -1,0 +1,10 @@
+-- 코드를 작성해주세요
+SELECT COUNT(F.FISH_TYPE) AS FISH_COUNT, N.FISH_NAME
+    FROM FISH_INFO F
+        JOIN FISH_NAME_INFO N
+        ON F.FISH_TYPE = N.FISH_TYPE
+    GROUP BY N.FISH_NAME
+    ORDER BY 1 DESC;
+    
+    #GROUP BY에 FISH_TYPE이 안되는 이유는 멀까
+    #LEFT JOIN 사용하면 메인 테이블의 0값까지 카운트 가능

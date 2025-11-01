@@ -1,0 +1,7 @@
+-- 코드를 입력하세요
+SELECT TRUNCATE(PRICE, -4) AS PRICE_GROUP, COUNT(PRODUCT_ID) AS PRODUCTS
+    FROM PRODUCT
+    GROUP BY 1
+    ORDER BY 1
+    
+    #ROUND: 반올림, FLOOR: 소수점 버림, CEILING: 소수점 올림, TRUNCATE: 버림(정수 가능)
